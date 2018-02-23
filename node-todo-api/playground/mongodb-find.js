@@ -6,9 +6,6 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
 	}
 	console.log('Connected to MongoDB server');
 
-//	db.collection.('Todos').find({},(err,result) => {
-//		console.log(result);
-//	})
 	
 	db.collection('todos').find().toArray().then((docs) => {
 		console.log('Todos');
